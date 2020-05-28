@@ -30,7 +30,7 @@ public class Main {
     }
 
     private static boolean checkPalindrome(String possiblyPalindrome) {
-        StringBuilder sb = new StringBuilder(possiblyPalindrome);
+        StringBuilder sb = new StringBuilder(possiblyPalindrome.replaceAll("[^a-zA-Z]", "").toLowerCase());
 
         return possiblyPalindrome.equals(sb.reverse().toString());
     }
