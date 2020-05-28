@@ -1,5 +1,6 @@
 package com.company;
 
+// Person class was in class_creation.java task, this is just continuation of that task
 public class Kasperovych extends Person {
     public Kasperovych(String name, int age) {
         super(name, age);
