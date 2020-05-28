@@ -30,9 +30,10 @@ public class Main {
     }
 
     private static boolean checkPalindrome(String possiblyPalindrome) {
-        StringBuilder sb = new StringBuilder(possiblyPalindrome.replaceAll("[^a-zA-Z]", "").toLowerCase());
+        String pureString = possiblyPalindrome.replaceAll("[^a-zA-Z]", "").toLowerCase();
+        StringBuilder sb = new StringBuilder(pureString);
 
-        return possiblyPalindrome.equals(sb.reverse().toString());
+        return pureString.equals(sb.reverse().toString());
     }
 
     private static double getArea() {
