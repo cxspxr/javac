@@ -9,6 +9,7 @@ interface Imaginable {
 }
 
 
+// Person class was in class_creation.java task, this is just a continuation of that task
 public class Kasperovych extends Person implements Introducable, Imaginable {
     public Kasperovych(String name, int age) {
         super(name, age);
