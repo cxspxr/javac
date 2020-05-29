@@ -40,13 +40,10 @@ public class Main {
         double range = 3.14;
         double y = 0.8f;
         double dx = 0.01;
-        double n = range / dx;
         double area = 0.0;
         
-        for (int i = 0; i < (int) n; i++)
+        for (double x = 0; x < range; x+= dx)
         {
-            double x = dx * (double) i;
-
             double sin = Math.sin(x);
             if (sin <= y) {
                 area += sin * dx;
