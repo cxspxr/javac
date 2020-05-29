@@ -38,20 +38,24 @@ public class Main {
 
     private static double getArea() {
         double range = 3.14;
-        double k = 0.1f;
-        double n = range / k;
+        double y = 0.8f;
+        double dx = 0.01;
+        double n = range / dx;
         double area = 0.0;
         
         for (int i = 0; i < (int) n; i++)
         {
-            double x = range * (double) i / n;
+            double x = dx * (double) i;
 
-            area += Math.sin(x);
+            double sin = Math.sin(x);
+            if (sin <= y) {
+                area += sin * dx;
+            } else {
+                area += dx * y;
+            }            
         }
 
-        area += (Math.sin(0) + Math.sin(range)) / 2.0;
-
-        return area * range / n;
+        return area;
     }
 }
 
