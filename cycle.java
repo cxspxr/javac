@@ -1,8 +1,17 @@
+  
+/**
+* Cycle? practice
+* 
+* (c) Yaroslav Kasperovhych
+* MIT License
+* /
+
 package com.company;
 
 import java.lang.reflect.Field;
 
 public class Main {
+    // Facts about myself
     int age = 22;
     boolean isStudent = true;
     String position = "full stack web developer; team leader @ datacrafts.io";
@@ -19,7 +28,8 @@ public class Main {
         System.out.println(String.format("%s is %s", palindrome, checkPalindrome(palindrome) ? "a palindrome" : "not a palindrome"));
         System.out.println(String.format("Area equals to %s", getArea()));
     }
-
+    
+    // Fact printing methods
     private static void printFacts() throws IllegalAccessException {
         Main fakeInstance = new Main();
 
@@ -29,6 +39,7 @@ public class Main {
         }
     }
 
+    // Palindrome method
     private static boolean checkPalindrome(String possiblyPalindrome) {
         String pureString = possiblyPalindrome.replaceAll("[^a-zA-Z]", "").toLowerCase();
         StringBuilder sb = new StringBuilder(pureString);
@@ -36,6 +47,7 @@ public class Main {
         return pureString.equals(sb.reverse().toString());
     }
 
+    // Iterative computing method
     private static double getArea() {
         double range = 3.14;
         double y = 0.8f;
