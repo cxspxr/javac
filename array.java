@@ -1,3 +1,10 @@
+/**
+* Array practice
+* 
+* (c) Yaroslav Kasperovhych
+* MIT License
+* /
+
 package com.company;
 
 import java.util.Arrays;
@@ -7,6 +14,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) throws IllegalAccessException {
+        // Novel part 
         String novelPart = "THE BOY WHO LIVED\n" +
                 "\n" +
                 "Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say\n" +
@@ -66,9 +74,16 @@ public class Main {
                 "put the cat out of his mind. As he drove toward town he thought of\n" +
                 "nothing except a large order of drills he was hoping to get that day.\n";
 
+        // All words
         String[] words = novelPart.split("\\W+");
+        
+        // Words without punctuation 
         String[] wordsWithoutPunctuationSigns = words.clone();
+
+        // Unique set of words
         Set<String> uniqueSet = new LinkedHashSet<String>(Arrays.asList(words));
+        
+        // Unique array of words
         String[] distinctWords = uniqueSet.toArray(new String[uniqueSet.size()]);
     }
 }
