@@ -1,3 +1,10 @@
+/**
+* Polymorphism practice
+* 
+* (c) Yaroslav Kasperovhych
+* MIT License
+* /
+
 package com.company;
 
 interface Introducable {
